@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
 	return sequelize.define('VCRole', {
 		server_id: {
 			type: DataTypes.STRING,
-			primaryKey: true,
+			allowNull: false,
 		},
 		voice_channel_id: {
 			type: DataTypes.STRING,
@@ -14,5 +14,11 @@ module.exports = (sequelize, DataTypes) => {
 		},
 	}, {
 		timestamps: false,
+		indexes:[
+			{
+				unique: false,
+				fields:['server_id', 'voice_channel_id']
+			}
+		]
 	});
 };
