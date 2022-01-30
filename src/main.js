@@ -1,6 +1,6 @@
 //https://discord.com/api/oauth2/authorize?client_id=937002489058844682&permissions=536870907383&scope=bot
 
-const { token, botId } = require('./configs/config.js');
+const { token } = require('./configs/config.js');
 
 const CommandHandler = require('./handlers/Command.js');
 const EventHandler = require('./handlers/Event.js');

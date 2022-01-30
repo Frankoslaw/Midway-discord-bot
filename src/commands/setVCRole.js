@@ -1,16 +1,9 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('database', 'user', 'password', {
-	host: 'localhost',
-	dialect: 'sqlite',
-	logging: false,
-	// SQLite only
-	storage: '../../database.sqlite',
-});
+const sequelize = require('../configs/db.js')
 
 const VCRole = require('../models/VCRole.js')(sequelize, Sequelize.DataTypes);
-VCRole.sync()
 
 module.exports = {
 	data: new SlashCommandBuilder()
