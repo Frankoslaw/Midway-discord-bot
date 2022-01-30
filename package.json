@@ -23,5 +23,9 @@
     "pino": "^7.0.0-rc.9",
     "sequelize": "^6.15.0",
     "sqlite3": "^5.0.2"
+  },
+  "engines": {
+    "node": "17.x",
+    "npm": "8.x"
   }
 }
